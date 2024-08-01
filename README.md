@@ -1,3 +1,3 @@
 # Shopping Cart
 
-Mock shopping cart made with React
+Mock shopping cart created with HTML, CSS, JS, and React
