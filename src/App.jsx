@@ -1,20 +1,24 @@
+import { Link, Outlet } from "react-router-dom";
 import './App.css';
 
 function App() {
   return (
     <>
       <nav className="navbar">
-        <h1 className="navbar-header">RealFakeStore</h1>
+        <h1>RealFakeStore</h1>
         <ul>
-          <button className="navbar-button">Home</button>
-          <button className="navbar-button">Shop</button>
-          <span className="navbar-span">
-            <img src="/shopping-cart.png"></img>
-          </span>
+          <li><Link to="home"><button>Home</button></Link></li>
+          <li><Link to="shop"><button>Shop</button></Link></li>
+          <li>
+            <Link to="cart">
+              <img src="/shopping-cart.png" alt="Shopping Cart" />
+            </Link>
+          </li>
         </ul>
       </nav>
+      <Outlet />
     </>
-  )
+  );
 }
 
 export default App;
