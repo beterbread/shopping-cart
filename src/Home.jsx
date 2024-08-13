@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <h1>This is home test</h1>
+      <h1>Add more stuff here later, main focus is the funtionality first</h1>
     </>
   )
 }
