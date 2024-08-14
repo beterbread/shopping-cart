@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useCart } from './CartContext'; 
 import './Item.css';
 
 function Item({ product }) {
     const [quantity, setQuantity] = useState(1);
+    const { addToCart } = useCart(); 
 
     const increment = () => {
         setQuantity(prevQuantity => prevQuantity + 1);
@@ -19,6 +21,7 @@ function Item({ product }) {
     };
 
     const handleAddToCart = () => {
+        addToCart(product, quantity); 
         console.log(`Added ${quantity} of ${product.title} to the cart.`);
     };
 
@@ -55,4 +58,3 @@ Item.propTypes = {
 };
 
 export default Item;
-
