@@ -1,19 +1,64 @@
-
-.navbar, .navbar ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.navbar img {
-  width: 25px;
-  height: 25px;
+.content {
+  padding-top: 133px; 
 }
 
 .navbar {
-  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222831;
+  padding: 40px 40px;
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000; 
+}
+
+.navbar h1 {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 48px;
+  color: #eeeeee;
+}
+
+.navbar button {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #222831;
+  color: #eeeeee;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #393e46;
+  transform: scale(1.05);
 }
 
 .navbar ul {
+  display: flex;
+  align-items: center;
   list-style-type: none; 
+}
+
+.navbar ul li:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar svg {
+  width: 50px;
+  height: 50px;
+  fill: #eeeeee;
+  max-width: 100%;
+  height: auto;
+  transition: fill 0.3s, transform 0.3s;
+}
+
+.navbar svg:hover {
+  fill: #f7f7f7;
+  transform: scale(1.1);
 }
