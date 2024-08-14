@@ -1,0 +1,31 @@
+
+.home {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.home h1, .home p {
+  text-align: center;
+  color: #393e46;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.home button {
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #222831;
+  color: #eeeeee;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.home button:hover {
+  background-color: #393e46;
+  transform: scale(1.05);
+}
