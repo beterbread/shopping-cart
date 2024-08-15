@@ -31,18 +31,18 @@ function Item({ product }) {
             <p>Price: ${product.price}</p>
             <img src={product.image} alt={product.title} />
 
-            <div>
-                <button onClick={decrement}>-</button>
+            <div className="inputContainer">
+                <button className="decrement" onClick={decrement}>-</button>
                 <input
                     type="number"
                     value={quantity}
                     onChange={handleInputChange}
                     min="1"
                 />
-                <button onClick={increment}>+</button>
+                <button className="increment" onClick={increment}>+</button>
             </div>
 
-            <button onClick={handleAddToCart}>
+            <button className="addtocart" onClick={handleAddToCart}>
                 Add to Cart
             </button>
         </div>

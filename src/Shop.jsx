@@ -7,7 +7,7 @@ function Shop() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=12')
+        fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
             .then(json => {
                 setProducts(json);
