@@ -11,7 +11,7 @@ function Cart() {
     };
 
     const handleCheckout = () => {
-        alert('Checkout process initiated!');
+        alert('Your items are at your doorstep!');
     };
 
     return (
@@ -24,7 +24,6 @@ function Cart() {
                     <ul>
                         {cartItems.map(item => (
                             <li key={item.id} className="cart-item">
-                                <img src={item.image} alt={item.title} className="cart-item-image" />
                                 <div className="cart-item-details">
                                     <p>{item.title}</p>
                                     <p>${item.price} x {item.quantity}</p>
@@ -32,6 +31,7 @@ function Cart() {
                                         Remove
                                     </button>
                                 </div>
+                                <img src={item.image} alt={item.title} className="cart-item-image" />
                             </li>
                         ))}
                     </ul>
