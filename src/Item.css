@@ -1,8 +1,19 @@
 
 .item {
-  border: solid 1px black;
+  text-align: center;
 }
 
 .item img {
-  width: 100px;
+  max-width: 100%; 
+  height: auto;
+}
+
+.item h3 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.item p {
+  font-size: 1em;
+  color: #555;
 }

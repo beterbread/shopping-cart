@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import Item from './Item'; 
+import './Shop.css'; 
 
 function Shop() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=10')
+        fetch('https://fakestoreapi.com/products?limit=12')
             .then(res => res.json())
             .then(json => {
                 setProducts(json);
@@ -17,11 +18,14 @@ function Shop() {
     return (
         <>
             {loading ? (
-                <div>Loading...</div>
+                <div className="loading-container">
+                    <div className="loading-message">Loading...</div>
+                    <div className="spinner"></div>
+                </div>
             ) : (
-                <ul>
+                <ul className="shop-container">
                     {products.map(product => (
-                        <li key={product.id}>
+                        <li key={product.id} className="shop-item">
                             <Item product={product} />
                         </li>
                     ))}
